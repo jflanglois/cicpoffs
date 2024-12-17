@@ -1,6 +1,10 @@
+.*
+!.gitignore
+!.envrc
+!.github
+!.gitlab-ci.yml
 cicpoffs
-.vscode
-.vscode/**
+result
 packaging/debian.deb
 packaging/arch/pkg
 packaging/arch/src

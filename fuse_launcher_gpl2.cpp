@@ -63,6 +63,7 @@
  */
 
 #include "cicpoffs.cpp"
+#include "fuse3/fuse_opt.h"
 
 enum {
 	CICPOFFS_OPT_HELP,
@@ -111,7 +112,7 @@ static int cicpoffs_opt_parse(void* data, const char* arg, int key, struct fuse_
 			fuse_main(outargs->argc, outargs->argv, &operations, NULL);
 			exit(0);
 		case CICPOFFS_OPT_VERSION:
-			fprintf(stderr, "%s: %s\nFUSE API version: %d\n", outargs->argv[0], VERSION, fuse_version());
+			fprintf(stderr, "%s: %s\n", outargs->argv[0], VERSION);
 			fuse_opt_add_arg(outargs, "--version");
 			fuse_main(outargs->argc, outargs->argv, &operations, NULL);
 			exit(0);
